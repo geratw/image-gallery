@@ -18,7 +18,8 @@ function displayPhotos(photos) {
       img.alt = photo.alt_description || "Photo";
       photoContainer.appendChild(img);
     });
-    if (photos.length > 4) {
+    console.log(photos.length);
+    if (photos.length > 2) {
       const footer = document.querySelector("footer");
       footer.style.position = "relative";
     }
