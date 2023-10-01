@@ -15,14 +15,27 @@
     <header>
       <h1 class="head-name"><i class="fas fa-camera"></i> Image Gallery</h1>
       <div class="search-container">
-        <input class="input-search-image" type="text" id="searchInput" placeholder="Enter search term..." autofocus onkeypress="handleKeyPress(event)"/>
+        <div class="input-wrapper">
+          <input
+            class="input-search-image"
+            type="text"
+            id="searchInput"
+            placeholder="Enter search term..."
+            autofocus
+            onkeypress="handleKeyPress(event)"
+          />
+          <span class="clear-icon" id="clearSearch">&times;</span>
+        </div>
         <button class="search-button" onclick="searchPhotos()">
           <i class="fas fa-search"></i>
         </button>
       </div>
     </header>
 
-    <main class="main-images" id="photoContainer"></main>
+    <main class="main-images" id="photoContainer">
+      <img src="images/images1.jpg" alt="" />
+      <img src="images/images2.jpg" alt="" />
+    </main>
 
     <footer class="footer">
       <div class="footer-items">

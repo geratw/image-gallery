@@ -18,7 +18,6 @@ function displayPhotos(photos) {
       img.alt = photo.alt_description || "Photo";
       photoContainer.appendChild(img);
     });
-    console.log(photos.length);
     if (photos.length > 2) {
       const footer = document.querySelector("footer");
       footer.style.position = "relative";
@@ -31,6 +30,7 @@ function displayPhotos(photos) {
     });
   }
 }
+
 async function searchPhotos() {
   const query = searchInput.value;
   if (query) {
@@ -63,3 +63,9 @@ function handleKeyPress(event) {
     searchPhotos();
   }
 }
+
+const clearSearchButton = document.getElementById("clearSearch");
+
+clearSearchButton.addEventListener("click", () => {
+  searchInput.value = "";
+});
