@@ -69,3 +69,15 @@ const clearSearchButton = document.getElementById("clearSearch");
 clearSearchButton.addEventListener("click", () => {
   searchInput.value = "";
 });
+
+
+
+function onPageLoad() {
+  const defaultQuery = "cat";
+  fetchPhotos(defaultQuery)
+    .then((photos) => {
+      displayPhotos(photos);
+    })
+}
+
+window.onload = onPageLoad;
