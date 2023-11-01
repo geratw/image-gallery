@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/icon.png" type="image/png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" />
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Caveat&family=Mooli&display=swap");
+    </style>
+  </head>
+  <body>
+    <header>
+      <section class="fixed-header">
+        <div class="head-input" >
+          <h1 class="head-name"><a class="style-camera-text" href="#photoContainer"><i class="fas fa-camera"></i> Image Gallery</h1></a>
+          <div class="search-container">
+            <div class="input-wrapper">
+              <input
+                class="input-search-image"
+                type="text"
+                id="searchInput"
+                placeholder="Enter search term..."
+                autofocus
+                onkeypress="handleKeyPress(event)"
+              />
+              <span class="clear-icon" id="clearSearch">&times;</span>
+            </div>
+            <button class="search-button" onclick="searchPhotos()">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="main-images" id="photoContainer" >
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer-items">
+        <a id="profile-link" href="https://github.com/geratw" class="year contact-details"><i class="fab fa-github"></i> GitHub</a>
+        <span class="footer-text">&copy; Maksim 2023</span>
+        <a href="https://rs.school/js/" alt="Логотип курса"><img class="logo-image" src="images/rs_school_js.svg" /></a>
+      </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
